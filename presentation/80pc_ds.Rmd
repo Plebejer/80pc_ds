@@ -1,32 +1,42 @@
 ---
 title: "80% Data Science"
-subtitle: "Daten importieren, visualisieren, säubern und transformieren mit **R**"
 author: "Matthias Gomolka"
 date: "12.--15. November 2018"
-output: 
+output:
+  ioslides_presentation: 
+    smaller: yes
+    widescreen: yes
+    incremental: yes
+    css: styles.css
+    df_print: tibble
+  slidy_presentation: default
   beamer_presentation:
     includes:
       in_header: header.txt
     latex_engine: xelatex
-sansfont: Open Sans
 monofont: Fira Mono
 fontsize: 11pt
-classoption: "aspectratio=169"
+sansfont: Open Sans
+subtitle: Daten importieren, visualisieren, säubern und transformieren mit **R**
+classoption: aspectratio=169
 ---
 
-```{r setup, include=FALSE}
+```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
-  messages = FALSE,
   collapse = TRUE
 )
 ```
 
-## My Test slide
+# My Presentation
+
+---
+
+Here is some text for testing **bold** and _italic_ text.
+
+---
 
 ```{r}
 suppressPackageStartupMessages(library(tidyverse))
 
-starwars %>% 
-  select(name, height)
-
+starwars
 ```
