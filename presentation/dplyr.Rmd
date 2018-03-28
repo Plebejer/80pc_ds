@@ -1,0 +1,95 @@
+---
+title: "Data wrangling mit `dplyr`"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.sty
+    latex_engine: xelatex
+classoption: aspectratio=169
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE
+)
+options(tibble.print_max = 6, tibble.print_min = 6)
+```
+
+## Überblick
+
+- `dplyr` bietet _6 Verben_ zum transformieren und  zusammenfassen von Daten
+ 
+```{r, message = FALSE}
+library(dplyr)
+```
+
+
+---
+
+## Spalten auswählen mit `dplyr::select()`
+
+### Syntax:
+```{r, eval = FALSE}
+select(.data, ...)
+```
+
+### Beispiel:
+```{r}
+select(starwars, name, height, mass)
+```
+
+---
+
+## Spalten auswählen mit `dplyr::select()`
+
+### Andere Möglichkeiten zur Spaltenauswahl
+```{r, eval = FALSE}
+select(starwars, name:mass)
+# alle Spalten zwischen name und mass (einschließlich) auswählen
+
+select(starwars, -hair_color, -skin_color)
+# alle Spalten außer hair_color und skin_color auswählen
+
+```
+
+
+---
+
+## Zeilen auswählen mit `dplyr::filter()`
+
+---
+
+## Zeilen sortieren mit `dplyr::arrange()`
+
+---
+
+## Neue Spalten erstellen mit `dplyr::mutate()`
+
+---
+
+## Daten zusammenfassen mit `dplyr::summarise()`
+
+---
+
+## Gruppenweise Operationen mit `dplyr::group_by()`
+
+---
+
+## `dplyr::`Zusammenfassung
+
+`dplyr` bietet 6 Verben zum transformieren und zusammenfassen von Daten:
+
+- `select()`
+- `filter()`
+- `arrange()`
+- `mutate()`
+- `summarize()`
+- `group_by()`
+
+---
+
+### Kontakt
+
+matthias.gomolka@bundesbank.de
+
++49 69 9566-4991

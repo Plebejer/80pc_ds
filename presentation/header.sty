@@ -1,0 +1,29 @@
+% fonts
+\setsansfont{Open Sans}
+\setmonofont{Fira Mono}
+
+%% change fontsize of R code
+\let\oldShaded\Shaded
+\let\endoldShaded\endShaded
+\renewenvironment{Shaded}{\scriptsize\oldShaded}{\endoldShaded}
+
+%% colors
+\usepackage{xcolor}
+\definecolor{col1}{HTML}{2C3E50}  % dunkelblau
+\definecolor{col2}{HTML}{E74C3C}  % orange
+
+% title page
+\setbeamercolor{title} {fg = col1} % Titelfarbe
+\setbeamercolor{author}{fg = col1} % Farbe Autor
+\setbeamercolor{date}  {fg = col1} % Farbe Datum
+
+% other pages
+\setbeamercolor{titlelike}  {fg=col1} % Farbe Abschnittsüberschriften (#)
+\setbeamercolor{frametitle} {fg=col1} % Farbe Folientitel (##)
+\setbeamercolor{block title}{fg=col2} % Farbe Überschrift auf Folie (###)
+\setbeamercolor{item}       {fg=col2} % Farbe Aufzählungszeichen
+
+
+%% appearance
+\setbeamertemplate{items}{$\bullet$}
+\setbeamertemplate{footline}[frame number]
